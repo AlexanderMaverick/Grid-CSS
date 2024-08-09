@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header header header"
+    "sidebar product-grid product-grid product-grid"
+    "footer footer footer footer";
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100vh;
+  gap: 0;
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  height: 5vh;
+}
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  height: 5vh;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #e3e3e3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.product-grid {
+  grid-area: product-grid;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  overflow-y: auto;
+  background-color: #e3e3e3;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #b3b3b3;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 37vh;
+  width: 1vw;
+  min-height: 200px;
+  min-width: 200px;
+  overflow: hidden;
+  position: relative;
+  padding: 5px; /* Añade un poco de padding interno */
+}
+
+.product-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+.product-card .product-info {
+  margin-top: auto; /* Mueve el contenido hacia abajo */
+  margin-bottom: 10%; /* Ajusta la distancia entre el texto y el botón */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-card .product-info h2 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.product-card .product-info .price {
+  font-size: 1em;
+  color: #555;
+}
+
+.product-card .buy-button {
+  display: flex;
+  background-color: #00346c;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 10%;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9em;
+  box-sizing: border-box;
+}
