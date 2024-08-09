@@ -13,7 +13,7 @@
   grid-template-columns: 1fr 5fr;
   grid-template-rows: auto 1fr auto;
   height: 100vh;
-  gap: 0;
+  gap: 10;
 }
 
 .header {
@@ -53,6 +53,7 @@
   gap: 10px;
   overflow-y: auto;
   background-color: #e3e3e3;
+  padding-top: 5px;
 }
 
 .product-card {
@@ -70,18 +71,18 @@
   min-width: 200px;
   overflow: hidden;
   position: relative;
-  padding: 5px; /* Añade un poco de padding interno */
+  padding: 5px;
 }
 
 .product-card img {
   width: 100%;
-  height: 100px;
+  height: 70%;
   object-fit: cover;
 }
 
 .product-card .product-info {
-  margin-top: auto; /* Mueve el contenido hacia abajo */
-  margin-bottom: 10%; /* Ajusta la distancia entre el texto y el botón */
+  margin-top: auto;
+  margin-bottom: 13%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -89,8 +90,8 @@
 }
 
 .product-card .product-info h2 {
-  font-size: 1.2em;
-  margin-bottom: 5px;
+  font-size: 1.1em;
+  margin-bottom: 3px;
 }
 
 .product-card .product-info .price {
